@@ -14,7 +14,7 @@ const SubscriptionSection: React.FC = () => {
             type="email"
             placeholder="آدرس ایمیل خود را وارد کنید"
           />
-          <Button type="button" className='btn-custom text-light'>اشتراک</Button>
+          <Button type="button" className='btn-custom text-light  w-xs-auto'>اشتراک</Button>
         </Form>
 
         <p className="subscription-note">
