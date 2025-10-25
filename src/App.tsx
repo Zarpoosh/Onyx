@@ -43,10 +43,10 @@ const App: React.FC = () => {
       <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Header/>
       <ImageSlider/>
-      <Products/>
-      <Services/>
-      <About/>
-      <Projects/>
+      {/* <Products/> */}
+      {/* <Services/> */}
+      {/* <About/> */}
+      {/* <Projects/> */}
       <SubscriptionSection/>
       <Footer/>
       <BackToTop/>
