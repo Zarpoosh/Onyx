@@ -1,0 +1,25 @@
+
+    .search-input {
+      outline: none !important;
+      box-shadow: none !important;
+      border: 2px solid rgb(204, 204, 204);
+      padding: 10px 15px;
+      min-width: 250px;
+      border-radius: 5px;
+      color: #fff; 
+      transition: border-color 0.3s;
+    
+    }
+    
+    .nav-link:hover {
+      color: #51fd0d !important; 
+    }
+    
+
+.search-input input:focus,
+.search-input input:active,
+.search-input input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border-color: #aaa;
+}
