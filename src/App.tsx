@@ -13,6 +13,7 @@ import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import SubscriptionSection from "./components/footer/Subscreption";
 import Header from "./components/header/Headre";
+import Productsection from "./components/productsection/Productsection";
 
 
 const App: React.FC = () => {
@@ -42,7 +43,8 @@ const App: React.FC = () => {
 
       <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Header/>
-      <ImageSlider/>
+      <Productsection/>
+      {/* <ImageSlider/> */}
       {/* <Products/> */}
       {/* <Services/> */}
       {/* <About/> */}

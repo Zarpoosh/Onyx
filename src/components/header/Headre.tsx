@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             className="text-center mb-4 mb-md-0"
           >
             <img
-              src="https://onyxcompany.ir/assets/moarefi02-CPLMm8M4.jpg"
+              src="/images/facroty.jpg"
               alt="Bolduzer"
               className="img-fluid rounded shadow about-image"
             />

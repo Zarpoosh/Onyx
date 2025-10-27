@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './InageSlider.css';
 
 const InageSlider: React.FC = () => {
-  // هر بخش ۳ عکس دارد
   const kaolinSlides = [
     "https://onyxcompany.ir/assets/IMG_2287-BM3eospK.jpeg",
     "https://onyxcompany.ir/assets/NN22-D46a2zYr.jpeg",
@@ -29,7 +28,6 @@ const InageSlider: React.FC = () => {
     "https://images.pexels.com/photos/723240/pexels-photo-723240.jpeg",
   ];
 
-  // تابع سازنده اسلایدر برای کاهش تکرار
   const renderSlider = (title: string, slides: string[]) => (
     <div className="mb-5">
       <h2 className="text-center fw-bold mb-4">{title}</h2>
@@ -46,10 +44,8 @@ const InageSlider: React.FC = () => {
           ))}
         </Carousel>
 
-        {/* متن ثابت روی همه اسلایدها */}
         <div className="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
           <h3>{title}</h3>
-          {/* <p>بیش از ۲۵ سال سابقه درخشان در زمینه تولید و عرضه {title}.</p> */}
           <Button variant="btn-custom" className='btn-custom fw-bold m-1' href="#read-more">بیشتر</Button>
           <Button variant="dark" className=' bg-dark' href="#read-more">خدمات</Button>
         </div>
