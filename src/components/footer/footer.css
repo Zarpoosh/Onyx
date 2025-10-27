@@ -23,3 +23,12 @@
   box-shadow: none;
 }
 
+.social-icons {
+  flex-direction: column ;
+}
+
+@media (min-width: 448px) {
+  .social-icons {
+    flex-direction: row ;
+  }
+}

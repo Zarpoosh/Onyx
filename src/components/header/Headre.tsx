@@ -4,14 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header: React.FC = () => {
   return (
-    <section id="about" className="about-section py-5 my-5 ">
+    <section id="about" className="about-section py-5 my-2 ">
       <Container>
         <Row className="align-items-center">
          
           <Col
             lg={{ span: 7, order: 1 }}
             xs={{ span: 12, order: 2 }}
-            className="text-md-start text-center my-4"
+            className="text-md-start text-center my-5"
           >
             <h2 className="fw-bold mb-3 text-end">گروه صنعتی و معدنی اونیکس</h2>
             <p className="mb-4 text-end p-3">
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           <Col
             lg={{ span: 5, order: 2 }}
             xs={{ span: 12, order: 1 }}
-            className="text-center mb-4 mb-md-0"
+            className="text-center mb-2 mb-md-0"
           >
             <img
               src="/images/facroty.jpg"

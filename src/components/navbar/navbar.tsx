@@ -1,39 +1,50 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import './navbar.css';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import "./navbar.css";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 interface NavbarProps {
   darkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-const NavbarComponent: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
-  const expand = 'lg';
+const NavbarComponent: React.FC<NavbarProps> = ({
+  darkMode,
+  toggleDarkMode,
+}) => {
+  const expand = "lg";
 
   return (
-    <Navbar 
-      expand={expand} 
+    <Navbar
+      expand={expand}
       fixed="top"
-      className={`sticky-top shadow-sm ${darkMode ? 'bg-dark navbar-dark' : 'bg-light navbar-light'}`}
+      className={`sticky-top shadow-sm ${
+        darkMode ? "bg-dark navbar-dark" : "bg-light navbar-light"
+      }`}
     >
       <Container fluid>
-        <Navbar.Brand href="#">Onyx</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <img
+            src="https://onyxcompany.ir/assets/logo-new2-DX-s1jsm.png"
+            alt="Onyx Logo"
+            height="30"
+            className="d-inline-block align-top me-2"
+          />
+          Onyx
+        </Navbar.Brand>
 
-      
         <div className="d-flex align-items-center ms-auto">
           <Button
-            variant={darkMode ? 'light' : 'dark'}
+            variant={darkMode ? "light" : "dark"}
             onClick={toggleDarkMode}
             className="me-2"
           >
             {darkMode ? <FaSun /> : <FaMoon />}
           </Button>
-
         </div>
 
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -67,6 +78,6 @@ const NavbarComponent: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) =>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavbarComponent;

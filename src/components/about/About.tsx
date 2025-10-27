@@ -5,7 +5,7 @@ import "./About.css";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="about-section py-5 my-5 ">
+    <section id="about" className="about-section py-5 my-1 ">
       <Container>
         <Row className="align-items-center">
           <Col
