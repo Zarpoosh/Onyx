@@ -1,7 +1,7 @@
 
 
 
-import { Container, Navbar, Nav, Button, Col } from "react-bootstrap";
+import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { FaLinkedin, FaInstagram, FaGoogle, FaYoutube, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import "./footer.css"
