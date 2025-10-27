@@ -32,7 +32,7 @@ const BackToTop: React.FC = () => {
       }`}
       style={{
         bottom: '50px',
-        left: '30px', // سمت چپ
+        left: '30px',
         borderRadius: '50%',
         width: '50px',
         height: '50px',
