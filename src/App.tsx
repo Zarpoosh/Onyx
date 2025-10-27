@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // or less ideally
 import { useState, useEffect } from "react";
 import OffcanvasExample from "./components/navbar/navbar";
-import ImageSlider from "./components/ slider/InageSlider";
-import "./styles/global.css"
-import Services from "./components/services/Services";
-import Products from "./components/products/Products";
+// import ImageSlider from "./components/ slider/InageSlider";
+// import "./styles/global.css"
+// import Services from "./components/services/Services";
+// import Products from "./components/products/Products";
 import BackToTop from "./components/BackToTop";
-import About from "./components/about/About";
-import Projects from "./components/projects/Projects";
+// import About from "./components/about/About";
+// import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import SubscriptionSection from "./components/footer/Subscreption";
 import Header from "./components/header/Headre";

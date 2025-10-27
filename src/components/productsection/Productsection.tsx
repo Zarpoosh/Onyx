@@ -3,7 +3,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Productsection: React.FC = () => {
-  // هر بخش فقط یک تصویر دارد
   const sections = [
     {
       title: "کائولن",
@@ -11,11 +10,11 @@ const Productsection: React.FC = () => {
     },
     {
       title: "آجر‌های صنعتی",
-      image: "/images/img3.jpg", // از لیست قبلی نسوز صنعتی
+      image: "/images/img3.jpg", 
     },
     {
       title: "آجر نما",
-      image: "/images/houseimage.PNG", // از لیست قبلی نسوزنما
+      image: "/images/houseimage.PNG",
     },
     {
       title: "سفال",
@@ -35,15 +34,7 @@ const Productsection: React.FC = () => {
               className="img-fluid rounded slider-img"
               style={{ maxHeight: '500px', objectFit: 'cover', width: '100%' }}
             />
-            {/* <div className="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
-              <h3>{section.title}</h3>
-              <Button variant="btn-custom" className="btn-custom fw-bold m-1" href="#read-more">
-                بیشتر
-              </Button>
-              <Button variant="dark" className="bg-dark" href="#read-more">
-                خدمات
-              </Button>
-            </div> */}
+           
           </div>
         </div>
       ))}
