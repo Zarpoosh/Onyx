@@ -5,6 +5,7 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { FaLinkedin, FaInstagram, FaGoogle, FaYoutube, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import "./footer.css"
+import SubscriptionSection from "./Subscreption";
 
 const Footer = () => {
   const emails = [
@@ -17,6 +18,8 @@ const Footer = () => {
       ];
   return (
     <footer className="bg-dark text-light pt-5 pb-3">
+      <SubscriptionSection />
+
     <Container>
       <Navbar bg="dark" variant="dark" expand="lg" className="py-4">
         <Container className="d-flex justify-content-between align-items-start flex-wrap gap-4">
