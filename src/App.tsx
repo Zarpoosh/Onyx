@@ -1,60 +1,64 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// or less ideally
 import "./styles/global.css";
-import { useState, useEffect } from "react";
+
 import OffcanvasExample from "./components/navbar/navbar";
 import Footer from "./components/footer/Footer";
 import SubscriptionSection from "./components/footer/Subscreption";
 import Header from "./components/header/Headre";
 import BackToTop from "./components/BackToTop";
 import Productsection from "./components/productsection/Productsection";
-// import ImageSlider from "./components/ slider/InageSlider";
-// import Services from "./components/services/Services";
-// import Products from "./components/products/Products";
-// import About from "./components/about/About";
-// import Projects from "./components/projects/Projects";
+import ProductDetail from "./components/productsection/ProductDetail";
 
+import { useState, useEffect } from "react";
 
+// 👇👇 این کامپوننت جدید
+const AppContent: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ darkMode, toggleDarkMode }) => {
+  const location = useLocation();
+
+  // چک می‌کنیم آیا آدرس فعلی شامل "/products/" هست یا نه
+  const hideHeader = location.pathname.startsWith("/products/");
+
+  return (
+    <>
+      <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
+      {/* فقط وقتی آدرس جزئیات محصول نیست، Header رو نشون بده */}
+      {!hideHeader && <Header />}
+
+      <Routes>
+        <Route path="/" element={<Productsection />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
+      </Routes>
+
+      <SubscriptionSection />
+      <Footer />
+      <BackToTop />
+    </>
+  );
+};
+
+// 👇 کامپوننت اصلی App
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
     return savedMode ? JSON.parse(savedMode) : true;
   });
 
-// save in local storage
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
+    document.body.classList.toggle('dark-mode', darkMode);
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode((prev: boolean) => !prev);
-  };
-
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   return (
-    <>
-    <div className={darkMode ? 'text-light' : 'bg-light text-dark'}>
-
-      <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-      <Header/>
-      <Productsection/>
-      {/* <ImageSlider/> */}
-      {/* <Products/> */}
-      {/* <Services/> */}
-      {/* <About/> */}
-      {/* <Projects/> */}
-      <SubscriptionSection/>
-      <Footer/>
-      <BackToTop/>
-    </div>
-    </>
+    <Router>
+      <div className={darkMode ? 'text-light' : 'bg-light text-dark'}>
+        <AppContent darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
