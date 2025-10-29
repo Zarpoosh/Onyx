@@ -43,7 +43,6 @@ body.dark-mode select {
   border-color: #555;
 }
 
-/* نوار بالا یا پایین */
 .navbar,
 .footer {
   background-color: inherit;

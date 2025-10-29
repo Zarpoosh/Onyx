@@ -16,21 +16,18 @@ import ProductDetail from "./components/productsection/ProductDetail";
 
 import { useState, useEffect } from "react";
 
-// 👇👇 این کامپوننت جدید
 const AppContent: React.FC<{
   darkMode: boolean;
   toggleDarkMode: () => void;
 }> = ({ darkMode, toggleDarkMode }) => {
   const location = useLocation();
 
-  // چک می‌کنیم آیا آدرس فعلی شامل "/products/" هست یا نه
   const hideHeader = location.pathname.startsWith("/products/");
 
   return (
     <>
       <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {/* فقط وقتی آدرس جزئیات محصول نیست، Header رو نشون بده */}
       {!hideHeader && <Header />}
 
       <Routes>

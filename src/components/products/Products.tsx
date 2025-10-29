@@ -43,7 +43,6 @@ const Products: React.FC = () => {
     },
   ];
 
-  // State برای لایک و ذخیره
   const [liked, setLiked] = useState<boolean[]>(
     Array(products.length).fill(false)
   );
