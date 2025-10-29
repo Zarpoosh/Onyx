@@ -1,15 +1,3 @@
-.hover-green:hover {
-  color: #4ade80 !important;
-  transition: color 0.3s ease;
-}
-
-.btn-custom {
-  color: white;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-}
 
 .btn-custom:hover {
   color: #4ade80 !important;
@@ -32,3 +20,5 @@
     flex-direction: row ;
   }
 }
+
+/* footer.css */

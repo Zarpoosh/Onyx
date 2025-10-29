@@ -5,8 +5,16 @@ const products = [
   {
     id: "kaolin",
     title: "کائولن",
-    image: "https://onyxcompany.ir/assets/IMG_2287-BM3eospK.jpeg",
-    description: "کائولن خاکی سفید رنگ است که در صنایع سرامیک و چینی‌سازی کاربرد دارد.",
+    image: "https://onyxcompany.ir/assets/moarefi02-CPLMm8M4.jpg",
+    description: `
+    شرکت اونیکس اردبیل از سال ۱۳۹۰ فعالیت خود در زمینه تولید و عرضه انواع محصولات سرامیکی را آغاز کرده است 
+    و در سال ۱۳۹۸ با سرمایه‌گذاری در تهیه و فرآوری و عرضه کاولن با کیفیت بالا را شروع کرده است.
+    معدن کاولن این شرکت واقع در محدوده مشکین شهر و از معادن با کیفیت و عیار بالای آلومینا در سطح کشوری می‌باشد.  
+    این مجموعه در فاز اول با همکاری متخصصین مجرب و ماشین آلات به روز و با ظرفیت اسمی سالانه ۲۰ هزار تن 
+    محصول خود را به صورت کلوخ و دانه‌بندی شده به بازار عرضه می‌نماید.  
+    سایت فرآوری واحد در دست مونتاژ راه‌اندازی می‌باشد که در آینده نزدیک انواع کاولن فرآوری شده نیز به بازار عرضه خواهد شد.
+    `,
+    
   },
   {
     id: "industrial-bricks",
@@ -35,16 +43,26 @@ const ProductDetail: React.FC = () => {
   if (!product) return <div className="text-center py-5">محصول پیدا نشد.</div>;
 
   return (
-    <div className="container text-center py-5">
-      <h1 className="fw-bold mb-4">{product.title}</h1>
+    <div className="container py-5 ">
+  <div className="row align-items-center text-center text-md-start">
+    {/* عکس سمت چپ */}
+    <div className="col-md-6 mb-4 mb-md-0">
       <img
         src={product.image}
         alt={product.title}
-        className="img-fluid rounded mb-4"
-        style={{ maxHeight: "500px", objectFit: "cover" }}
+        className="img-fluid rounded shadow"
+        style={{ maxHeight: "500px", objectFit: "cover", width: "100%" }}
       />
-      <p className="lead">{product.description}</p>
     </div>
+
+    {/* متن سمت راست */}
+    <div className="col-md-6">
+      <h1 className="fw-bold mb-4 text-end">{product.title}</h1>
+      <p className="lead text-end">{product.description}</p>
+    </div>
+  </div>
+</div>
+
   );
 };
 
