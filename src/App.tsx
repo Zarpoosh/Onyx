@@ -43,10 +43,11 @@ const AppContent: React.FC<{
 
 // 👇 کامپوننت اصلی App
 const App: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(() => {
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
     const savedMode = localStorage.getItem("darkMode");
     return savedMode ? JSON.parse(savedMode) : true;
   });
+  
 
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
