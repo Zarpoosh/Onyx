@@ -11,6 +11,10 @@ body.dark-mode {
   color: #f1f1f1;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
+body, html {
+  font-family: 'Vazir', sans-serif;
+}
+
 
 a {
   color: inherit;
