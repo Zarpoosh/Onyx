@@ -12,9 +12,10 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Headre";
 import BackToTop from "./components/BackToTop";
 import Productsection from "./components/productsection/Productsection";
-import ProductDetail from "./components/productsection/ProductDetail";
+import ProductDetail from "./components/productdetails/ProductDetail";
 
 import { useState, useEffect } from "react";
+import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 
 const AppContent: React.FC<{
   darkMode: boolean;
@@ -47,7 +48,6 @@ const App: React.FC = () => {
     const savedMode = localStorage.getItem("darkMode");
     return savedMode ? JSON.parse(savedMode) : true;
   });
-  
 
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
@@ -58,6 +58,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop/>
       <div className={darkMode ? "text-light" : "bg-light text-dark"}>
         <AppContent darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>

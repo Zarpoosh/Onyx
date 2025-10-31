@@ -35,11 +35,10 @@ const About: React.FC = () => {
             className="text-center mb-4 mb-md-0"
           >
             <img
-  src="https://onyxcompany.ir/assets/navaei-DmrPUgXk.jpeg"
-  alt="Profile"
-  className="img-fluid about-image"
-/>
-
+              src="https://onyxcompany.ir/assets/navaei-DmrPUgXk.jpeg"
+              alt="Profile"
+              className="img-fluid about-image"
+            />
           </Col>
         </Row>
       </Container>
