@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Header: React.FC = () => {
   return (
     <section id="about" className="about-section py-5 my-2 ">
       <Container>
         <Row className="align-items-center">
-         
           <Col
             lg={{ span: 7, order: 1 }}
             xs={{ span: 12, order: 2 }}
@@ -49,13 +50,13 @@ const Header: React.FC = () => {
             xs={{ span: 12, order: 1 }}
             className="text-center mb-2 mb-md-0"
           >
-            <img
+            <LazyLoadImage
               src="/images/facroty.jpg"
               alt="Bolduzer"
+              effect="blur" 
               className="img-fluid rounded shadow about-image"
             />
           </Col>
-
         </Row>
       </Container>
     </section>

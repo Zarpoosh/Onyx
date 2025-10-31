@@ -1,0 +1,37 @@
+.loader {
+  width: 100px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  /* background: #fff; */
+  filter: blur(0px) contrast(1) hue-rotate(0deg); /* اصلاح شد تا دیده بشه */
+  mix-blend-mode: normal; /* اصلاح شد */
+
+  /* وسط صفحه */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* روی همه چیز باشه */
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 30px 0;
+  border-radius: 100px;
+  background: greenyellow;
+  animation: l4 2s infinite linear;
+}
+
+.loader:after {
+  --s: -1;
+}
+
+@keyframes l4 {
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}

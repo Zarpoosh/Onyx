@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const Productsection: React.FC = () => {
   const sections = [
     {
@@ -37,7 +38,8 @@ const Productsection: React.FC = () => {
           <h2 className="fw-bold mb-4">{section.title}</h2>
           <div className="image-wrapper position-relative d-inline-block">
             <Link to={`/products/${section.id}`}>
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src={section.image}
                 alt={section.title}
                 className="img-fluid rounded slider-img"
