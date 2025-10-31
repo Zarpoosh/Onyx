@@ -1,5 +1,3 @@
-// import { Carousel } from "react-bootstrap";
-
 const KaolinDetail = () => (
   <div className="container py-5 min-vh-100 d-flex align-items-center">
     <div className="row align-items-center text-center text-md-start w-100">
