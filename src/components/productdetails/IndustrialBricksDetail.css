@@ -1,0 +1,130 @@
+/* استایل‌های کارت تصویر */
+.image-card-wrapper {
+    transition: all 0.3s ease;
+  }
+  
+  .image-card-wrapper:hover {
+    transform: translateY(-5px);
+  }
+  
+  .lazy-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .lazy-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  /* افکت هاور روی تصویر */
+  .lazy-img-wrapper:hover .lazy-img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+  }
+  
+  /* overlay متن روی تصویر */
+  .image-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    opacity: 1;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .overlay-content {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+  
+  .overlay-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* حالت عادی - متن کمی کمرنگ */
+  .image-overlay {
+    opacity: 0.8;
+  }
+  
+  .overlay-content {
+    transform: translateY(10px);
+  }
+  
+  /* حالت هاور - متن کاملا مشخص */
+  .lazy-img-wrapper:hover .image-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+  
+  .lazy-img-wrapper:hover .overlay-content {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ریسپانسیو برای تبلت */
+  @media (max-width: 992px) {
+    .lazy-img-wrapper {
+      height: 180px;
+    }
+    
+    .overlay-title {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* ریسپانسیو برای موبایل */
+  @media (max-width: 768px) {
+    .lazy-img-wrapper {
+      height: 160px;
+    }
+    
+    .overlay-title {
+      font-size: 0.8rem;
+    }
+    
+    .overlay-content {
+      padding: 8px 12px;
+    }
+  }
+  
+  /* ریسپانسیو برای موبایل‌های کوچک */
+  @media (max-width: 576px) {
+    .lazy-img-wrapper {
+      height: 140px;
+    }
+    
+    .overlay-title {
+      font-size: 0.75rem;
+    }
+  }
+
+  /* در فایل CSS */
+.image-overlay {
+    opacity: 0;
+  }
+  
+  .lazy-img-wrapper:hover .image-overlay {
+    opacity: 1;
+  }

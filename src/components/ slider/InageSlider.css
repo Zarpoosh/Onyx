@@ -1,15 +1,15 @@
 .image-slider-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh; 
   overflow: hidden;
 }
 
+/* برای عکس‌ها */
 .slider-img {
   width: 100%;
-  height: 100vh;
-  object-fit: cover; 
-  filter: brightness(80%); 
+  height: 50vh; /* ارتفاع برابر با صفحه */
+  object-fit: cover; /* عکس به درستی برش بخوره */
+  filter: brightness(80%); /* کمی تیره برای خوانایی متن */
 }
 
 .carousel-fixed-text {
@@ -48,6 +48,7 @@
   }
 }
 
+/* ریسپانسیو برای موبایل‌ها */
 @media (max-width: 576px) {
   .carousel-fixed-text h1 {
     font-size: 1.4rem;
