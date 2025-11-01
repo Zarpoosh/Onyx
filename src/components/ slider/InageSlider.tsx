@@ -11,11 +11,11 @@ const ImageSlider: React.FC = () => {
   ];
 
   const industries = [
-    "فولاد",
-    "ریخته گری",
-    "سیمان",
-    "پتروشیمی",
     "شیشه و سرامیک",
+    "پتروشیمی",
+    "سیمان",
+    "ریخته گری",
+    "فولاد",
   ];
   return (
     <div className="image-slider-wrapper position-relative">
@@ -40,7 +40,7 @@ const ImageSlider: React.FC = () => {
             <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-3">
               {industries.map((industry, index) => (
                 <li key={index} className="industry-item m-1 text-dark">
-                  <span className="industry-badge bg-light bg-opacity-75 rounded px-3 py-2">
+                  <span className="industry-badge bg-light bg-opacity-75 rounded px-1 py-1">
                     {industry}
                   </span>
                 </li>

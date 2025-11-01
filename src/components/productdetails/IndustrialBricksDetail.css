@@ -10,9 +10,10 @@
   .lazy-img-wrapper {
     position: relative;
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     overflow: hidden;
     border-radius: 10px;
+    /* border: 1px solid gray; */
   }
   
   .lazy-img {
@@ -49,12 +50,11 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     transform: translateY(0);
     transition: all 0.3s ease;
+    height: 100%;
   }
   
   .overlay-title {
     font-size: 0.9rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   }
   
   /* حالت عادی - متن کمی کمرنگ */
@@ -79,7 +79,7 @@
   
   .lazy-img-wrapper:hover .overlay-content {
     transform: translateY(0);
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
@@ -127,4 +127,8 @@
   
   .lazy-img-wrapper:hover .image-overlay {
     opacity: 1;
+  }
+
+  p{
+    font-size: 0.8rem;
   }

@@ -3,15 +3,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import InageSlider from "../ slider/InageSlider";
-import "./IndustrialBricksDetail.css";    
+import "./IndustrialBricksDetail.css";
 
 const items = [
-  { src: "/images/irone.jpeg", title: "صنایع فولاد و آهن" },
-  { src: "/images/Casting.jpeg", title: "ریخته گری" },
-  { src: "/images/Cement.jpeg", title: "سیمان" },
-  { src: "/images/petrochimical.jpeg", title: "پتروشیمی" },
-  { src: "/images/Glass making.jpeg", title: "شیشه و سرامیک" },
-  { src: "/images/Glucose.jpeg", title: "کوره قند و آهک" },
+  {
+    src: "/images/Glucose.jpeg",
+    title: "صنایع کوره آهک و قند",
+    desc: "استفاده از جرم های نسوز برای کوره های عمودی آهک",
+  },
+  {
+    src: "/images/Glass making.jpeg",
+    title: "صنعت شیشه و سرامیک",
+    desc: "کوره مخزن ذوب شیشه پوشش کوره تونلی و کوره غلتکی کوره شاتل و مناطق پخت",
+  },
+  {
+    src: "/images/petrochimical.jpeg",
+    title: "صنایع پتروشیمی",
+    desc: "کوره های حرارتی و برج های تقطیر صنایع نفت و گاز استفاده از جرم نسوز در نیروگاهای حرارتی وراکتورها،کورهای فرایندی و مبدل های حرارتی",
+  },
+  {
+    src: "/images/Cement.jpeg",
+    title: "صنعت سیمان",
+    desc: "پوشش کوره دوارو پیش گرمکن خنک کننده کلینک",
+  },
+  {
+    src: "/images/Casting.jpeg",
+    title: "ریخته گری",
+    desc: "استفاده از جرم های نسوزدر کوره های آلمینیومی و چدنی",
+  },
+  {
+    src: "/images/irone.jpeg",
+    title: "صنعت فولاد و آهن",
+    desc: "استفاده مواد نسوز درکوره ی نورد و کوره ذوب مبدل کوره الکتریکی،کوره تصویه",
+  },
 ];
 
 const IndustrialBricksDetail = () => (
@@ -30,7 +54,7 @@ const IndustrialBricksDetail = () => (
               className="d-flex flex-column align-items-center"
             >
               <div className="image-card-wrapper position-relative">
-                <div className="lazy-img-wrapper position-relative overflow-hidden rounded shadow-sm">
+                <div className="lazy-img-wrapper position-relative overflow-hidden rounded shadow-sm border-">
                   <LazyLoadImage
                     effect="blur"
                     src={item.src}
@@ -38,13 +62,13 @@ const IndustrialBricksDetail = () => (
                     className="lazy-img img-fluid"
                   />
                   {/* متن روی تصویر */}
-                  {/* متن روی تصویر */}
                   <div className="image-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                     <div className="overlay-content text-white text-center p-3">
-                      <h6 className="overlay-title mb-0">{item.title}</h6>
+                      <p className="text-justify ">{item.desc}</p>
                     </div>
                   </div>
                 </div>
+                <h6 className="overlay-title my-2">{item.title}</h6>
               </div>
             </Col>
           ))}

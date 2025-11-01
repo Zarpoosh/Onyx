@@ -56,8 +56,9 @@ const Footer = () => {
                 {emails.map((email, index) => (
                   <li
                     key={index}
-                    className="mb-2 d-flex align-items-center gap-2"
+                    className="mb-2 d-flex align-items-center gap-2 text-break"
                   >
+
                     <a
                       href={`mailto:${email}`}
                       className="text-light text-decoration-none"
