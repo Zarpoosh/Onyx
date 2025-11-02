@@ -11,6 +11,7 @@ const ImageSlider: React.FC = () => {
   ];
 
   const industries = [
+    "صنایع قند و آهک",
     "شیشه و سرامیک",
     "پتروشیمی",
     "سیمان",

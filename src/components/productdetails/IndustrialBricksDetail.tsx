@@ -4,6 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import InageSlider from "../ slider/InageSlider";
 import "./IndustrialBricksDetail.css";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -38,6 +39,51 @@ const items = [
   },
 ];
 
+const items2 = [
+  {
+    id:6,
+    link:"/article/6",
+    src: "/images/Glucose.jpeg",
+    title: "مواد اولیه  ",
+    desc: "استفاده از جرم های نسوز برای کوره های عمودی آهک",
+  },
+  {
+    id:5,
+    link:"/article/5",
+    src: "/images/malat.jpeg",
+    title: "ملات ها و ماستیک ها",
+    desc: "کوره مخزن ذوب شیشه پوشش کوره تونلی و کوره غلتکی کوره شاتل و مناطق پخت",
+  },
+  {
+    id:4,
+    link:"/article/4",
+    src: "/images/premade.jpeg",
+    title: "قطعات پیش ساخته(پریکست) ",
+    desc: "کوره های حرارتی و برج های تقطیر صنایع نفت و گاز استفاده از جرم نسوز در نیروگاهای حرارتی وراکتورها،کورهای فرایندی و مبدل های حرارتی",
+  },
+  {
+    id:3,
+    link:"/article/3",
+    src: "/images/germ.jpeg",
+    title: " جرم های نسوز",
+    desc: "پوشش کوره دوارو پیش گرمکن خنک کننده کلینک",
+  },
+  {
+    id:2,
+    link:"/article/2",
+    src: "/images/Refractorybrick.jpeg",
+    title: "اجر های عایق نسوز",
+    desc: "استفاده از جرم های نسوزدر کوره های آلمینیومی و چدنی",
+  },
+  {
+    id:1,
+    link:"/article/1",
+    src:     "/public/images/img3.jpg",
+    title: "اجر نسوز سنگین",
+    desc: "استفاده مواد نسوز درکوره ی نورد و کوره ذوب مبدل کوره الکتریکی،کوره تصویه",
+  },
+];
+
 const IndustrialBricksDetail = () => (
   <div>
     <InageSlider />
@@ -61,7 +107,6 @@ const IndustrialBricksDetail = () => (
                     alt={item.title}
                     className="lazy-img img-fluid"
                   />
-                  {/* متن روی تصویر */}
                   <div className="image-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                     <div className="overlay-content text-white text-center p-3">
                       <p className="text-justify ">{item.desc}</p>
@@ -73,8 +118,48 @@ const IndustrialBricksDetail = () => (
             </Col>
           ))}
         </Row>
+          <h3 className="text-bold m-4 ">فراورده های نسوز اونیکس</h3>
+      </div>
+      
+    </Container>
+
+
+    <Container className="py-4 d-flex justify-content-center align-items-center">
+      <div className="text-center w-100">
+        <Row className="justify-content-center g-4">
+          {items2.map((item2, index) => (
+            <Col
+              key={index}
+              xs={10}
+              sm={6}
+              md={4}
+              lg={2}
+              className="d-flex flex-column align-items-center"
+            >
+              <div className="position-relative">
+                <Link to={item2.link} className="text-decoration-none">
+                  <div className="lazy-img-wrapper position-relative overflow-hidden rounded shadow-sm">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={item2.src}
+                      alt={item2.title}
+                      className="lazy-img img-fluid"
+                    />
+                    <div className="image-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                      <div className="text-bold">
+                        <p className="text-center text-white mb-0">مطالعه مقاله</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                <h6 className="overlay-title my-2">{item2.title}</h6>
+              </div>
+            </Col>
+          ))}
+        </Row>
       </div>
     </Container>
+    
   </div>
 );
 

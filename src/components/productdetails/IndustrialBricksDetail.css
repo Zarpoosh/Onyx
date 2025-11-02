@@ -23,13 +23,11 @@
     transition: all 0.3s ease;
   }
   
-  /* افکت هاور روی تصویر */
   .lazy-img-wrapper:hover .lazy-img {
     transform: scale(1.1);
     filter: brightness(0.7);
   }
   
-  /* overlay متن روی تصویر */
   .image-overlay {
     background: linear-gradient(
       to bottom,
@@ -57,7 +55,6 @@
     font-size: 0.9rem;
   }
   
-  /* حالت عادی - متن کمی کمرنگ */
   .image-overlay {
     opacity: 0.8;
   }
@@ -66,7 +63,6 @@
     transform: translateY(10px);
   }
   
-  /* حالت هاور - متن کاملا مشخص */
   .lazy-img-wrapper:hover .image-overlay {
     opacity: 1;
     background: linear-gradient(
@@ -83,7 +79,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
-  /* ریسپانسیو برای تبلت */
   @media (max-width: 992px) {
     .lazy-img-wrapper {
       height: 180px;
@@ -94,7 +89,6 @@
     }
   }
   
-  /* ریسپانسیو برای موبایل */
   @media (max-width: 768px) {
     .lazy-img-wrapper {
       height: 160px;
@@ -109,7 +103,6 @@
     }
   }
   
-  /* ریسپانسیو برای موبایل‌های کوچک */
   @media (max-width: 576px) {
     .lazy-img-wrapper {
       height: 140px;
@@ -120,7 +113,6 @@
     }
   }
 
-  /* در فایل CSS */
 .image-overlay {
     opacity: 0;
   }

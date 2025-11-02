@@ -1,0 +1,50 @@
+/* ArticlePage.css */
+.article-page {
+    direction: rtl;
+  }
+  
+  .article-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .article-header h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .article-image-wrapper {
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .article-content {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #333;
+  }
+  
+  .article-content h3 {
+    color: #2c3e50;
+    margin: 2rem 0 1rem 0;
+    border-right: 4px solid #3498db;
+    padding-right: 1rem;
+  }
+  
+  .article-content ul {
+    padding-right: 2rem;
+  }
+  
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .line-height-3 {
+    line-height: 2;
+  }
+  
+  /* برای نمایش بهتر متن فارسی */
+  .article-content {
+    text-align: justify;
+    font-family: 'Vazir', 'Tanha', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

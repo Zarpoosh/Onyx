@@ -15,6 +15,7 @@ import ProductDetail from "./components/productdetails/ProductDetail";
 import { useState, useEffect } from "react";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
+import ArticlePage from "./components/productdetails/ArticlePage";
 
 const AppContent: React.FC<{
   darkMode: boolean;
@@ -23,16 +24,18 @@ const AppContent: React.FC<{
   const location = useLocation();
 
   const hideHeader = location.pathname.startsWith("/products/");
+  const hideHeader2 = location.pathname.startsWith("/article/");
 
   return (
     <>
       <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {!hideHeader && <Header />}
+      {!hideHeader && !hideHeader2 && <Header />}
 
       <Routes>
         <Route path="/" element={<Productsection />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
       </Routes>
 
       <Footer />
@@ -40,6 +43,7 @@ const AppContent: React.FC<{
     </>
   );
 };
+
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
