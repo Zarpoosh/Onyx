@@ -1,0 +1,32 @@
+.full-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* سایه ملایم روی عکس */
+    z-index: 1;
+  }
+  
+  .content {
+    z-index: 2;
+  }
+  
+  .content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  

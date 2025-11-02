@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import "./Productsection.css"; 
+
 const Productsection: React.FC = () => {
   const sections = [
     {
@@ -32,24 +32,19 @@ const Productsection: React.FC = () => {
   ];
 
   return (
-    <div id="home" className="container-fluid my-5">
+    <div id="home">
       {sections.map((section) => (
-        <div key={section.id} className="mb-5 text-center">
-          <h2 className="fw-bold mb-4">{section.title}</h2>
-          <div className="image-wrapper position-relative d-inline-block">
-            <Link to={`/products/${section.id}`}>
-              <LazyLoadImage
-                effect="blur"
-                src={section.image}
-                alt={section.title}
-                className="img-fluid rounded slider-img"
-                style={{
-                  maxHeight: "500px",
-                  objectFit: "cover",
-                  width: "100%",
-                  cursor: "pointer",
-                }}
-              />
+        <div
+          key={section.id}
+          className="full-section d-flex flex-column justify-content-center align-items-center text-center"
+          style={{ backgroundImage: `url(${section.image})` }}
+        >
+          <div className="overlay"></div>
+          <div className="content position-relative">
+            <h2 className="fw-bold text-white mb-3">{section.title}</h2>
+            <p className="text-white mb-4">{section.description}</p>
+            <Link to={`/products/${section.id}`} className="btn btn-light px-4">
+              مشاهده محصول
             </Link>
           </div>
         </div>
