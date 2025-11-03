@@ -25,7 +25,7 @@ const AppContent: React.FC<{
   const location = useLocation();
   const hideHeader = location.pathname.startsWith("/products/");
   const hideHeader2 = location.pathname.startsWith("/article/");
-  const hideHeader3 = location.pathname.startsWith("  /services/");
+  const hideHeader3 = location.pathname.startsWith("/services");
 
   return (
     <>
