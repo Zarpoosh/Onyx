@@ -61,7 +61,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({
               <Nav.Link href="#home"> صفحه اصلی</Nav.Link>
               <Nav.Link href="#about">درباره ما</Nav.Link>
               <Nav.Link href="#projects">پروژه ها</Nav.Link>
-              <Nav.Link href="#services">خدمات</Nav.Link>
+              <Nav.Link href="#services">خدمات مهندسی</Nav.Link>
               <Nav.Link href="#products">محصولات</Nav.Link>
             </Nav>
 

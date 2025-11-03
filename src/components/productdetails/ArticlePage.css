@@ -1,6 +1,6 @@
 /* ArticlePage.css */
 .article-page {
-    direction: rtl;
+    direction: ltr;
   }
   
   .article-header {
@@ -48,3 +48,39 @@
     text-align: justify;
     font-family: 'Vazir', 'Tanha', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+
+
+  .article-text {
+    direction: rtl;
+    text-align: justify;
+    white-space: pre-line;
+    line-height: 2.2;
+    font-size: 1.1rem;
+    font-family: "Vazirmatn", sans-serif;
+    position: relative;
+  }
+  
+  /* لیست‌ها و بولت‌ها راست‌چین و مرتب */
+  .article-text::marker {
+    text-align: right;
+  }
+  
+  /* برای خط تیره‌ها و دایره‌ها */
+  .article-text {
+    unicode-bidi: plaintext;
+  }
+  
+  .article-text p,
+  .article-text li {
+    direction: rtl;
+  }
+  
+  .article-text li::marker {
+    direction: rtl;
+  }
+  
+  /* اگه از – یا • استفاده شده باشه، به صورت بصری سمت راست میان */
+  .article-text {
+    text-align: right;
+  }
+  

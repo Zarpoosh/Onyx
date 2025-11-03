@@ -43,15 +43,15 @@ const items2 = [
   {
     id:6,
     link:"/article/6",
-    src: "/images/Glucose.jpeg",
-    title: "مواد اولیه  ",
+    src: "/images/mastics.jpeg",
+    title: "ماستیک ها  ",
     desc: "استفاده از جرم های نسوز برای کوره های عمودی آهک",
   },
   {
     id:5,
     link:"/article/5",
     src: "/images/malat.jpeg",
-    title: "ملات ها و ماستیک ها",
+    title: "ملات ها ",
     desc: "کوره مخزن ذوب شیشه پوشش کوره تونلی و کوره غلتکی کوره شاتل و مناطق پخت",
   },
   {
@@ -118,7 +118,7 @@ const IndustrialBricksDetail = () => (
             </Col>
           ))}
         </Row>
-          <h3 className="text-bold m-4 ">فراورده های نسوز اونیکس</h3>
+          <h3 className="text-bold m-4 ">فراورده های نسوز انیکس</h3>
       </div>
       
     </Container>
