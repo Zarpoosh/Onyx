@@ -1,0 +1,32 @@
+.engineering-container {
+    font-family: "Vazir", sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 2;
+  }
+  
+  .section-title {
+    color: #3a8b00;
+    font-weight: bold;
+    border-right: 4px solid #3a8b00;
+    padding-right: 10px;
+  }
+  
+  .benefits-list,
+  .industry-list,
+  .steps-list {
+    list-style-type: circle;
+    margin-right: 25px;
+    margin-top: 10px;
+  }
+  
+  .benefits-list li,
+  .industry-list li,
+  .steps-list li {
+    margin-bottom: 8px;
+  }
+  
+  ol.steps-list {
+    list-style-type: decimal;
+  }
+  

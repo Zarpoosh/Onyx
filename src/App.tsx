@@ -16,26 +16,28 @@ import { useState, useEffect } from "react";
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
 import Loader from "./components/loader/Loader";
 import ArticlePage from "./components/productdetails/ArticlePage";
+import EngineeringServices from "./components/navbar/EngineeringServices";
 
 const AppContent: React.FC<{
   darkMode: boolean;
   toggleDarkMode: () => void;
 }> = ({ darkMode, toggleDarkMode }) => {
   const location = useLocation();
-
   const hideHeader = location.pathname.startsWith("/products/");
   const hideHeader2 = location.pathname.startsWith("/article/");
+  const hideHeader3 = location.pathname.startsWith("  /services");
 
   return (
     <>
       <OffcanvasExample darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {!hideHeader && !hideHeader2 && <Header />}
+      {!hideHeader && !hideHeader2 && hideHeader3 && <Header />}
 
       <Routes>
         <Route path="/" element={<Productsection />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/article/:id" element={<ArticlePage />} />
+        <Route path="/services" element={<EngineeringServices />} />
       </Routes>
 
       <Footer />
