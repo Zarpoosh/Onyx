@@ -68,6 +68,11 @@ const KaolinDetail = () => {
           alt="kaolin full 2"
           className="w-100 full-image"
         />
+          <img
+          src="/images/datasheet.jpeg"
+          alt="kaolin full 2"
+          className="w-100 full-image"
+        />
       </div>
 
       {/* تیتر وسط */}

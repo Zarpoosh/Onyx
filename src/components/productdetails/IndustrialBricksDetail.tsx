@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const items = [
   {
-    src: "/images/Glucose.jpeg",
+    src: "/images/glocos2.jpeg",
     title: "صنایع کوره آهک و قند",
     desc: "استفاده از جرم های نسوز برای کوره های عمودی آهک",
   },
@@ -18,7 +18,7 @@ const items = [
     desc: "کوره مخزن ذوب شیشه پوشش کوره تونلی و کوره غلتکی کوره شاتل و مناطق پخت",
   },
   {
-    src: "/images/petrochimical.jpeg",
+    src: "/images/petrochimical2.jpg",
     title: "صنایع پتروشیمی",
     desc: "کوره های حرارتی و برج های تقطیر صنایع نفت و گاز استفاده از جرم نسوز در نیروگاهای حرارتی وراکتورها،کورهای فرایندی و مبدل های حرارتی",
   },
