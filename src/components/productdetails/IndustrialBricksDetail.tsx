@@ -105,7 +105,6 @@ const IndustrialBricksDetail = () => (
     slides={homeSlides}
     industries={homeIndustries}
     showIndustries={true}
-    fixedText="به سایت ما خوش آمدید"
     interval={3000}
      />
     <Container className="py-4 d-flex justify-content-center align-items-center">
