@@ -9,22 +9,22 @@ import { Link } from "react-router-dom";
 const items = [
   {
     src: "/images/glocos2.jpeg",
-    title: "صنایع کوره آهک و قند",
+    title: " کوره آهک و قند",
     desc: "استفاده از جرم های نسوز برای کوره های عمودی آهک",
   },
   {
     src: "/images/Glass making.jpeg",
-    title: "صنعت شیشه و سرامیک",
+    title: " شیشه و سرامیک",
     desc: "کوره مخزن ذوب شیشه پوشش کوره تونلی و کوره غلتکی کوره شاتل و مناطق پخت",
   },
   {
     src: "/images/petrochimical2.jpg",
-    title: "صنایع پتروشیمی",
+    title: " پتروشیمی",
     desc: "کوره های حرارتی و برج های تقطیر صنایع نفت و گاز استفاده از جرم نسوز در نیروگاهای حرارتی وراکتورها،کورهای فرایندی و مبدل های حرارتی",
   },
   {
     src: "/images/Cement.jpeg",
-    title: "صنعت سیمان",
+    title: " سیمان",
     desc: "پوشش کوره دوارو پیش گرمکن خنک کننده کلینک",
   },
   {
@@ -34,7 +34,7 @@ const items = [
   },
   {
     src: "/images/irone.jpeg",
-    title: "صنعت فولاد و آهن",
+    title: " فولاد و آهن",
     desc: "استفاده مواد نسوز درکوره ی نورد و کوره ذوب مبدل کوره الکتریکی،کوره تصویه",
   },
 ];
@@ -84,9 +84,30 @@ const items2 = [
   },
 ];
 
+const homeSlides = [
+  "/images/img3.jpg",
+  "/images/crick.jpeg",
+  "/images/kureh.jpeg",
+];
+
+const homeIndustries = [
+  "صنایع قند و آهک",
+  "شیشه و سرامیک",
+  "پتروشیمی",
+  "سیمان",
+  "ریخته گری",
+  "فولاد",
+];
+
 const IndustrialBricksDetail = () => (
   <div>
-    <InageSlider />
+    <InageSlider
+    slides={homeSlides}
+    industries={homeIndustries}
+    showIndustries={true}
+    fixedText="به سایت ما خوش آمدید"
+    interval={3000}
+     />
     <Container className="py-4 d-flex justify-content-center align-items-center">
       <div className="text-center w-100">
         <Row className="justify-content-center g-4">

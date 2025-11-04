@@ -3,24 +3,24 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./InageSlider.css";
 
-const ImageSlider: React.FC = () => {
-  const slides = [
-    "/public/images/img3.jpg",
-    "/public/images/crick.jpeg",
-    "/public/images/kureh.jpeg",
-  ];
+interface ImageSliderProps {
+  slides: string[];                // مسیر عکس‌ها
+  industries?: string[];           // لیست صنایع (اختیاری)
+  showIndustries?: boolean;        // آیا لیست صنایع نمایش داده شود؟
+  fixedText?: string;              // متن ثابت روی اسلایدر (اختیاری)
+  interval?: number;               // فاصله زمانی بین اسلایدها
+}
 
-  const industries = [
-    "صنایع قند و آهک",
-    "شیشه و سرامیک",
-    "پتروشیمی",
-    "سیمان",
-    "ریخته گری",
-    "فولاد",
-  ];
+const ImageSlider: React.FC<ImageSliderProps> = ({
+  slides,
+  industries = [],
+  showIndustries = false,
+  fixedText = "",
+  interval = 4000,
+}) => {
   return (
     <div className="image-slider-wrapper position-relative">
-      <Carousel fade interval={4000} controls indicators>
+      <Carousel fade interval={interval} controls indicators>
         {slides.map((src, index) => (
           <Carousel.Item key={index}>
             <img
@@ -32,24 +32,27 @@ const ImageSlider: React.FC = () => {
         ))}
       </Carousel>
 
-      {/* متن ثابت روی همه اسلایدها */}
-      <div className="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+      {/* متن ثابت فقط اگر showIndustries true باشه */}
+      {showIndustries && (
+        <div className="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+          {fixedText && <h2 className="mb-4">{fixedText}</h2>}
 
-        <div className="industries-list mt-4 text-center">
-          <h3 className="mb-4 ">صنایع مصرف کننده</h3>
-          <div className="industries-container rtl-direction">
-            <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-3">
-              {industries.map((industry, index) => (
-                <li key={index} className="industry-item m-1 text-dark">
-                  <span className="industry-badge bg-light bg-opacity-75 rounded px-1 py-1">
-                    {industry}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className="industries-list mt-4 text-center">
+            <h3 className="mb-4">صنایع مصرف کننده</h3>
+            <div className="industries-container rtl-direction">
+              <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-3">
+                {industries.map((industry, index) => (
+                  <li key={index} className="industry-item m-1 text-dark">
+                    <span className="industry-badge bg-light bg-opacity-75 rounded px-2 py-1">
+                      {industry}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
