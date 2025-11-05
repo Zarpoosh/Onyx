@@ -23,3 +23,8 @@
   box-shadow: none;
   border-color: #aaa;
 }
+
+
+.nav-link {
+  cursor: pointer !important;
+}

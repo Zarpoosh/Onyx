@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark text-light pt-5 pb-3">
+    <footer id="about" className="bg-dark text-light pt-5 pb-3">
       <SubscriptionSection />
 
       <Container>

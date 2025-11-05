@@ -63,13 +63,12 @@ const NavbarComponent: React.FC<NavbarProps> = ({
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="/">صفحه اصلی</Nav.Link>
 
-              {/* ✅ اینجا از react-scroll استفاده کردیم */}
               <Link
                 to="about"
                 spy={true}
                 smooth={true}
                 duration={600}
-                offset={-70} // فاصله از Navbar
+                offset={-70} 
                 className="nav-link"
               >
                 درباره ما

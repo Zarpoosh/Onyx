@@ -4,7 +4,7 @@ import "./subscreption.css";
 
 const SubscriptionSection: React.FC = () => {
   return (
-    <section id="about" className="subscription-section">
+    <section  className="subscription-section">
       <Container>
         <h1 className='fw-bold'>با آخرین اطلاعات صنعتی ما به‌روز بمانید</h1>
         <p>برای دریافت آخرین اخبار، تحقیقات و نوآوری‌ها از گروه صنعتی اونیکس مشترک شوید.</p>
@@ -26,3 +26,4 @@ const SubscriptionSection: React.FC = () => {
 };
 
 export default SubscriptionSection;
+
