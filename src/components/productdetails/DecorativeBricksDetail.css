@@ -1,30 +1,51 @@
-.lazy-img-wrapper {
+/* بنر تمام صفحه بالا */
+.banner-full {
+  position: relative;
+  width: 100vw;      /* عرض کامل صفحه */
+  height: 60vh;      /* ارتفاع بنر - قابل تنظیم */
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  border-radius: 20px;
-  width: 100%;
-  max-height: 220px;
 }
 
-.lazy-img {
-  transition: transform 0.3s ease;
-  object-fit: cover;
+/* تصویر بنر */
+.banner-full-img {
   width: 100%;
   height: 100%;
-  cursor: pointer;
-}
-.article-text {
-  line-height: 1.8;
-  font-size: 1.1rem;
-  text-align: justify;
+  object-fit: cover;   /* تصویر بدون کشیدگی */
+  object-position: center;
+  display: block;
 }
 
-.text-justify {
-  text-align: justify;
+/* لایه نیمه‌شفاف */
+.banner-full-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* عنوان وسط بنر */
+.banner-full-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .article-text {
-    font-size: 1rem;
-    text-align: right;
+  .banner-full {
+    height: 40vh;
   }
+  .banner-full-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+.kaolin-page {
+  margin-top: -56px; /* اگر navbar ارتفاعش 56px است */
 }

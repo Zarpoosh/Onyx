@@ -32,7 +32,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
         ))}
       </Carousel>
 
-      {/* متن ثابت فقط اگر showIndustries true باشه */}
       {showIndustries && (
         <div className="carousel-fixed-text position-absolute top-50 start-50 translate-middle text-center text-white px-3">
           {fixedText && <h2 className="mb-4">{fixedText}</h2>}
